@@ -1,0 +1,1 @@
+cmd_/home/nick/programming/kernel/ldd_tutorial/kernel_hw/hello.mod := { echo  /home/nick/programming/kernel/ldd_tutorial/kernel_hw/hello.o; echo; } > /home/nick/programming/kernel/ldd_tutorial/kernel_hw/hello.mod
