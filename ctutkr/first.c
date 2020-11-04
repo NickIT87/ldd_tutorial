@@ -6,7 +6,7 @@ int main () {
 
     long double a = sqrt(8);
 
-    printf("%Lf\n", a);
+    printf("%3.19Lf\n", a);
 
     return 0;
 }
