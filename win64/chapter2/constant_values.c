@@ -4,6 +4,7 @@
 /* определить диапазоны типов */
 int main()
 {
+	/*
 	printf("Integer datatypes:\n");
     printf("%d <= char <= %d\n", CHAR_MIN, CHAR_MAX);
     printf("%d <= int <= %d\n", INT_MIN, INT_MAX);
@@ -18,6 +19,17 @@ int main()
     printf("Float datatypes:\n");
     printf("%e <= float <= %e\n", FLT_MIN, FLT_MAX);
     printf("%e <= double <= %e\n", DBL_MIN, DBL_MAX);
+  	*/
+
+    typedef enum Bool {
+    	FALSE,	// 0
+    	TRUE,	// 1
+    } bool;
+
+    bool a = TRUE;
+    bool b = FALSE;
+
+    printf("True: %d, False: %d\n", a, b);
 
     return 0;
 }
