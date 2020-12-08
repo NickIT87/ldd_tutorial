@@ -1,16 +1,19 @@
 #include <stdio.h>
 
-int quantityOfHeat(int c, int m, int dt );
+int quantityOfHeat(double c, double m, double dt );
 
 int main() {
-	printf("%d\n", quantityOfHeat(880, 2000, 50));
+	printf("%d\n", quantityOfHeat(880, 200, 23));
 
 
 	return 0;
 }
 
-int quantityOfHeat(int c, int m, int dt )
+/* The quantity of heat Q that changes the 
+ temperature ΔT of a mass m of a substance 
+ is given by Q = cmΔT */
+int quantityOfHeat(double c, double m, double dt )
 {
-	int Q = c * m * dt;
+	long double Q = c * m * dt;
 	return Q;
 }
