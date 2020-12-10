@@ -12,11 +12,6 @@ int substance(int Q, int m, int dt)
 	return Q / (m * dt);
 }
 
-int phaseDt(int t1, int t2)
-{	/*	time per second	*/
-	return t2 - t1;
-}
-
 	/*	main flow programm	*/
 int main() 
 {
@@ -27,10 +22,10 @@ int main()
 	/* ? */
 	int c = 0;
 	/* solve */
-	c = substance(Q, m, phaseDt(t1, t2));
+	c = substance(Q, m, t2 - t1);
 	printf("%d\n", c);
 	/* DEBUG */
-	printf("%d\n", Q == quantityOfHeat(substance(Q, m, phaseDt(t1, t2)), m, phaseDt(t1, t2)));
+	printf("%d\n", Q == quantityOfHeat(substance(Q, m, t2 - t1), m, t2 - t1));
 
 	return 0;
 }
