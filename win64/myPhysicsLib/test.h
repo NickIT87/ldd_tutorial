@@ -1,3 +1,4 @@
+/*#include <stdio.h>*/
 
 int quantityOfHeat(int c, int m, int dt)
 {	/*	The quantity of heat Q that changes the 
@@ -10,3 +11,4 @@ int substance(int Q, int m, int dt)
 {	/*	Joule per kilogram-degree Celsius	*/
 	return Q / (m * dt);
 }
+
