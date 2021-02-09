@@ -16,7 +16,7 @@ void p35_solver()
 	/* solve */
 	printf("%d\n", substance(Q, m, t2 - t1)); /* 880 joule/kg*Celsius */
 	/* DEBUG */
-	printf("%d\n", Q == quantityOfHeat(substance(Q, m, t2 - t1), m, t2 - t1));
+	printf("%d\n", Q==quantityOfHeat(substance(Q,m,t2-t1), m, t2-t1));
 }
 
 
