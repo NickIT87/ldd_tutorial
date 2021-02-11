@@ -48,17 +48,79 @@ int main()
     }
     return 0;
 }
-/* part 2 */
-#define MAXVAL      /* максимальная глубина стека val */
 
+/* part 2 */
+#define MAXVAL 100  /* максимальная глубина стека val */
 int sp = 0;         /* следующая свободная позиция в стеке */
 double val[MAXVAL]; /* стек операндов */
 
 /* push: помещает число в стек операндов */
 void push(double f)
 {
-    if (sp < MAXVAL)
+    if ( sp < MAXVAL ) {
         val[sp++] = f;
-    else
+    } else {
         printf("error: stack full, can`t push %g\n", f);
+    }
+}
+
+/* извлекает и возвращает верхнее число из стека */
+double pop(void)
+{
+    if (sp > 0)
+        return val[--sp];
+    else {
+        printf("error: stack empty\n");
+        return 0.0;
+    }
+}
+/* part 3 */
+#include <ctype.h>
+
+int getch(void);
+void ungetch(int);
+
+/* getop: извлекает следующий операнд или знак операции */
+int getop(char s[])
+{
+    int i, c;
+    while ((s[0] = c = getch()) == ' ' || c == '\t')
+    {
+        /* code */;
+    }
+    s[1] = '\0';
+    if (!isdigit(c) && c != '.')
+        return c; /* not a number */
+    i = 0;
+    if (isdigit(c)) { /* накопление целой части */
+        while (isdigit(s[++i] = c = getch()))
+        {
+            /* code */;
+        }
+    }
+    if (c == '.') /* накопление дробной части */
+        while (isdigit(s[++i] = c = getch()))
+            ;
+    s[i] = '\0';
+    if (c != EOF)
+        ungetch(c);
+    return NUMBER;
+}
+
+/* part 4 */
+#define BUFSIZE 100
+char buf[BUFSIZE];          /* буфер для ungetch */
+int bufp = 0;               /* следующая свободная позиция в buf */
+
+int getch(void)     /* ввод символа (возможно, возвращенного в поток) */
+{
+    return (bufp > 0) ? buf[--bufp] : getchar();
+}
+
+void ungetch(int c) /* возвращение символа в поток ввода */
+{
+    if (bufp >= BUFSIZE)
+        printf("ungetch: too many characters\n");
+    else
+        buf[bufp++] = c;
 }
