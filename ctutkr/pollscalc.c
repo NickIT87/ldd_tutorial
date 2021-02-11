@@ -48,3 +48,17 @@ int main()
     }
     return 0;
 }
+/* part 2 */
+#define MAXVAL      /* максимальная глубина стека val */
+
+int sp = 0;         /* следующая свободная позиция в стеке */
+double val[MAXVAL]; /* стек операндов */
+
+/* push: помещает число в стек операндов */
+void push(double f)
+{
+    if (sp < MAXVAL)
+        val[sp++] = f;
+    else
+        printf("error: stack full, can`t push %g\n", f);
+}
