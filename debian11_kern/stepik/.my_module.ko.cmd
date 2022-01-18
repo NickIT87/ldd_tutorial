@@ -1,0 +1,1 @@
+cmd_/home/nick/programming/stepik/my_module.ko := ld -r -m elf_x86_64 --build-id=sha1  -T arch/x86/module.lds -o /home/nick/programming/stepik/my_module.ko /home/nick/programming/stepik/my_module.o /home/nick/programming/stepik/my_module.mod.o;  true

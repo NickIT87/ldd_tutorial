@@ -1,0 +1,1 @@
+cmd_/home/nick/programming/stepik/Module.symvers := sed 's/ko$$/o/' /home/nick/programming/stepik/modules.order | scripts/mod/modpost -m    -o /home/nick/programming/stepik/Module.symvers -e -i Module.symvers   -T -

@@ -1,0 +1,1 @@
+cmd_/home/nick/programming/kernel_hw/hello.ko := ld -r -m elf_x86_64 --build-id=sha1  -T arch/x86/module.lds -o /home/nick/programming/kernel_hw/hello.ko /home/nick/programming/kernel_hw/hello.o /home/nick/programming/kernel_hw/hello.mod.o;  true
