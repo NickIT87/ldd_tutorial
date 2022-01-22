@@ -38,8 +38,11 @@ static ssize_t mychrdev_read(struct file *file, char __user *buf, size_t lbuf, l
 
 static ssize_t mychrdev_write(struct file *file, const char __user *buf, size_t lbuf, loff_t *ppos)
 {
-	printk(KERN_ALERT "Write device %s:\n\n");
-	return 0;
+	int nbytes = lbuf - copy_from_user(kbuf + *ppos, buf, lbuf);
+	*ppos += nbytes;
+
+	printk(KERN_ALERT "Write device %s nbytes = %d, ppos = %d\n\n", MYDEV_NAME, nbytes, (int)*ppos);
+	return nbytes;
 }
 
 static const struct file_operations mycdev_fops = {

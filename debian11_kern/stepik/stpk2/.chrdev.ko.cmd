@@ -1,1 +1,1 @@
-cmd_/home/nick/programming/stpk2/chrdev.ko := ld -r -m elf_x86_64 --build-id=sha1  -T arch/x86/module.lds -o /home/nick/programming/stpk2/chrdev.ko /home/nick/programming/stpk2/chrdev.o /home/nick/programming/stpk2/chrdev.mod.o;  true
+cmd_/home/nick/ldd_tutorial/debian11_kern/stepik/stpk2/chrdev.ko := ld -r -m elf_x86_64 --build-id=sha1  -T arch/x86/module.lds -o /home/nick/ldd_tutorial/debian11_kern/stepik/stpk2/chrdev.ko /home/nick/ldd_tutorial/debian11_kern/stepik/stpk2/chrdev.o /home/nick/ldd_tutorial/debian11_kern/stepik/stpk2/chrdev.mod.o;  true

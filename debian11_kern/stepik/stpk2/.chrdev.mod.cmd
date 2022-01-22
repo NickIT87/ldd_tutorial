@@ -1,1 +1,1 @@
-cmd_/home/nick/programming/stpk2/chrdev.mod := { echo  /home/nick/programming/stpk2/chrdev.o;  echo; } > /home/nick/programming/stpk2/chrdev.mod
+cmd_/home/nick/ldd_tutorial/debian11_kern/stepik/stpk2/chrdev.mod := { echo  /home/nick/ldd_tutorial/debian11_kern/stepik/stpk2/chrdev.o;  echo; } > /home/nick/ldd_tutorial/debian11_kern/stepik/stpk2/chrdev.mod
