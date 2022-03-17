@@ -42,6 +42,46 @@
             <property name="y">19</property>
           </packing>
         </child>
+        <child>
+          <object class="GtkButton" id="button2">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="tooltip-text" translatable="yes">img btn</property>
+            <property name="always-show-image">True</property>
+            <signal name="clicked" handler="on_button2_clicked" swapped="no"/>
+            <child>
+              <object class="GtkImage" id="floppy">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="stock">gtk-floppy</property>
+                <property name="icon_size">6</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">55</property>
+            <property name="y">160</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label2">
+            <property name="width-request">100</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">label2</property>
+            <attributes>
+              <attribute name="font-desc" value="Terminus (TTF) Medium 20"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="foreground" value="#eded33333b3b"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">265</property>
+            <property name="y">142</property>
+          </packing>
+        </child>
       </object>
     </child>
   </object>

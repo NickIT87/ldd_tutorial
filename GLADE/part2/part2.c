@@ -14,10 +14,14 @@ GtkWidget   *window;
 GtkWidget   *fixed1;
 GtkWidget   *button1;
 GtkWidget   *label1;
+GtkWidget   *button2;
+GtkWidget   *label2;
 GtkBuilder  *builder;
 
 
 void on_button1_clicked (GtkButton *b);
+void on_button2_clicked (GtkButton *b);
+
 
 int main(int argc, char *argv[])
 {
@@ -32,6 +36,8 @@ int main(int argc, char *argv[])
     fixed1 = GTK_WIDGET(gtk_builder_get_object(builder, "fixed1"));
     button1 = GTK_WIDGET(gtk_builder_get_object(builder, "button1"));
     label1 = GTK_WIDGET(gtk_builder_get_object(builder, "label1"));
+    button2 = GTK_WIDGET(gtk_builder_get_object(builder, "button2"));
+    label2 = GTK_WIDGET(gtk_builder_get_object(builder, "label2"));
 
     gtk_widget_show(window);
     gtk_main();
@@ -43,4 +49,10 @@ void on_button1_clicked (GtkButton *b)
 {
     gtk_label_set_text(GTK_LABEL(label1), (const gchar*) "Hello World");
     printf("Hello World glade test\n");
+}
+
+void on_button2_clicked (GtkButton *b)
+{
+    gtk_label_set_text(GTK_LABEL(label2), (const gchar*) "Button2 clicked");
+    printf("button2 glade test\n");
 }
