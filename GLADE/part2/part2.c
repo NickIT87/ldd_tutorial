@@ -42,5 +42,5 @@ int main(int argc, char *argv[])
 void on_button1_clicked (GtkButton *b)
 {
     gtk_label_set_text(GTK_LABEL(label1), (const gchar*) "Hello World");
-    printf("Hello Worldos\n");
+    printf("Hello World glade test\n");
 }
