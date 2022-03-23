@@ -3,16 +3,27 @@
 
 using namespace std;
 
+class MyClass {
+    string id;
+    public:
+        MyClass(string _id) : id(_id) {}
+        string GetId() { return id; }
+};
+
 TEST(TestName, Subtest_1) {
     ASSERT_FALSE(1 == 2);
 }
 
 TEST(TestName, Subtest_2) {
-    ASSERT_TRUE(1 == 2);
+    ASSERT_TRUE(1 == 1);
 }
 
-TEST(TestName2, Subtest_1) {
-    EXPECT_EQ(1, 1);
+TEST(TestName2, increment_by_5) {
+    MyClass mc("root");
+    string value = mc.GetId();
+    EXPECT_EQ(value, "root");
+    ASSERT_STREQ(value.c_str(), "root");
+    EXPECT_STREQ(value.c_str(), "root");
 }
 
 int main(int argc, char **argv) {
