@@ -6,7 +6,7 @@ int main()
     int res = 0;
     for(int i = 0; i < 11; i++)
     {
-	res = res ^ arr[i];
+	    res = res ^ arr[i];
     }
     printf("%d", res);
 
