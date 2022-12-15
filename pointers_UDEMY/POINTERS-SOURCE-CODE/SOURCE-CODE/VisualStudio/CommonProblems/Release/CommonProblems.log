@@ -1,0 +1,8 @@
+﻿  main.c
+e:\bitwisecourses\books\programming\pointers\code\visualstudio\commonproblems\main.c(54): warning C4013: 'gets' undefined; assuming extern returning int
+  Generating code
+  2 of 5 functions (40.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  CommonProblems.vcxproj -> E:\BitwiseCourses\BOOKS\Programming\Pointers\CODE\VisualStudio\Release\CommonProblems.exe

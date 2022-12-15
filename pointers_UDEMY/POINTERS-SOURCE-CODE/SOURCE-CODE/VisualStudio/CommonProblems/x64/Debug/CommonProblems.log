@@ -1,0 +1,4 @@
+﻿  main.c
+e:\bitwisecourses\books\programming\pointers\code\visualstudio\commonproblems\main.c(54): warning C4013: 'gets' undefined; assuming extern returning int
+e:\bitwisecourses\books\programming\pointers\code\visualstudio\commonproblems\main.c(55): warning C4172: returning address of local variable or temporary: b
+  CommonProblems.vcxproj -> E:\BitwiseCourses\BOOKS\Programming\Pointers\CODE\VisualStudio\x64\Debug\CommonProblems.exe
