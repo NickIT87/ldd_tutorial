@@ -7,7 +7,7 @@ int main() {
     long long n;
     printf("Enter a binary number: ");
     scanf("%lld", &n);
-    printf("%lld in binary = %d in decimal", n, convertBinaryToDecimal(n));
+    printf("%lld in binary = %d in decimal\n", n, convertBinaryToDecimal(n));
     return 0;
 }
 

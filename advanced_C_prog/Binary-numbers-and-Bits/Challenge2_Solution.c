@@ -10,7 +10,7 @@ int main() {
    printf("Enter a decimal number: ");
    scanf("%d", &n);
    result = convertDecimalToBinary(n);
-   printf("%d in decimal = %lld to binary", n , result);
+   printf("%d in decimal = %lld to binary\n", n , result);
    return 0;
 }
 
