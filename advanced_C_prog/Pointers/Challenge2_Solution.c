@@ -25,7 +25,7 @@ int main(){
 
 
 #include <stdio.h>
-#include <malloc.h>
+#include <stdlib.h> // <malloc.h>
 
 void allocateMemory( int ** ptr) {
    *ptr = (int *) malloc(sizeof(int)); // allocate some memory

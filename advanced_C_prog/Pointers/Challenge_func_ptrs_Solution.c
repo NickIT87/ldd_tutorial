@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include <malloc.h>
+#include <stdlib.h> //<malloc.h>
 
 
 int array1[] = {10,20,30,40,50,60,70,80,90,100};
