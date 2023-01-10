@@ -1,0 +1,3 @@
+gcc -g -fPIC StringFunctions.c -shared -o libStringFunctions.so
+gcc -I . -c main.c -o main.o
+gcc -o main main.o -L . -l StringFunctions
