@@ -1,0 +1,19 @@
+(gdb) print a
+$2 = {1, 2, 3}
+
+(gdb) ptype a
+type = int [3]
+
+use x to see what a looks like under the hood
+
+(gdb) x/12xb &a
+0x7fffffffded0:	0x01	0x00	0x00	0x00	0x02	0x00	0x00	0x00
+0x7fffffffded8:	0x03	0x00	0x00	0x00
+
+The first four bytes store a[0], the next four store a[1], and the final four store a[2]. 
+
+Indeed, you can check that sizeof knows that a’s size in memory is twelve bytes:
+
+(gdb) print sizeof(a)
+$3 = 12
+

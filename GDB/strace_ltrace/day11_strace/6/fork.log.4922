@@ -1,0 +1,4 @@
+getpid()                                = 4922
+write(1, " child: My pid = 4922 \n", 23) = 23
+exit_group(0)                           = ?
++++ exited with 0 +++

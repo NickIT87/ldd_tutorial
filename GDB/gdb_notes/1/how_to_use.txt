@@ -1,0 +1,52 @@
+How to compile a program to use with gdb
+========================================
+
+$ gcc -g -o binaryfile source_code.c
+
+-g tells the compiler to store symbol table information in the executable.
+
+this includes:
+
+	--> symbol names
+	--> type info for symbols
+	--> files and line numbers where the symbols came from
+
+Tip: Check the size of binary with and without debugging symbols
+
+$ gdb ./binaryfile
+
+or
+
+$ gdb
+
+(gdb) file path_to_binary
+
+GDB is a command line interface.
+
+This means you will be provided with a prompt at which you can type commands.
+
+The GDB commandline looks like this:
+
+(gdb)
+
+Basic Commands
+=================
+
+This starts the program which you want to debug. 
+(gdb)run
+
+To exit GDB, use the quit command (abbreviated q) or type an end-of-file character (usually Ctrl-d).
+
+(gdb)quit
+
+The "-q" (or "--quiet") option on the command line just tells GDB not to print version information on startup. 
+(gdb)quiet
+
+
+Help
+====================
+
+If you’re ever confused about a command or just want more information, use the “help” command, with or without an argument:
+
+(gdb) help [command]
+

@@ -1,0 +1,30 @@
+gdb Text User Interface (TUI)
+=============================
+
+The gdb Text User Interface (TUI) is a terminal interface which uses the curses library to show the
+	
+	 source file
+	 assembly output
+	 program registers
+	 and GDB Commands
+
+in separate text windows
+
+The TUI mode is supported only on platforms where a suitable version of the curses library is available.
+
+The TUI mode is enabled by default when you invoke gdb as either ‘gdbtui’ or ‘gdb -tui’.
+
+You can also switch in and out of TUI mode while gdb runs by using various TUI commands and key bindings, such as Ctrl-x a
+	
+Commands
+=============
+
+Ctrl - l -- to repaint the screen //when there are printf's displayed
+
+You can type commands on the command line like usual, but the arrow keys will scroll the source code view instead of paging through history or navigating the entered command.
+
+To switch focus to the command line view, type ctrl-x o and the arrow keys works as in the normal command line mode. 
+
+Switching back to the source code view is done using the same key combination a second time.
+
+

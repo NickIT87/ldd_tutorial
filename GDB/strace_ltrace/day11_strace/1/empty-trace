@@ -1,0 +1,11 @@
+execve("./1", ["./1"], 0x7ffc0ea99ab0 /* 23 vars */) = 0
+brk(NULL)                               = 0x1aeb000
+brk(0x1aec1c0)                          = 0x1aec1c0
+arch_prctl(ARCH_SET_FS, 0x1aeb880)      = 0
+uname({sysname="Linux", nodename="ubuntu", ...}) = 0
+readlink("/proc/self/exe", "/home/linuxtrainer/Linux_System_"..., 4096) = 53
+brk(0x1b0d1c0)                          = 0x1b0d1c0
+brk(0x1b0e000)                          = 0x1b0e000
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+exit_group(0)                           = ?
++++ exited with 0 +++

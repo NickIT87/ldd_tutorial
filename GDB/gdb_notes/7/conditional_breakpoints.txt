@@ -1,0 +1,19 @@
+Conditional Breakpoints
+=========================
+
+As long as a breakpoint is enabled, the debugger always stops at that breakpoint.
+
+However, sometimes it's useful to tell the debugger to stop at a break point only if some condition is met, like the when a variable has a particularly interesting value.
+
+
+You can specify a break condition when you set a breakpoint by appending the keyword if to a normal break statement
+
+break [position] if expression
+
+In the above syntax position can be a function name or line number.
+
+If you already set a breakpoint at the desired position, you can use the condition command to add or change its break condition:
+
+condition bp_number [expression]
+
+

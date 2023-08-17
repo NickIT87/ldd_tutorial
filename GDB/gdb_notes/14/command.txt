@@ -1,0 +1,5 @@
+command breakpoint-number specifies commands to run whenever the breakpoint is reached. 
+
+(gdb) command 2
+  Type commands for when breakpoint 2 is hit, one per line.
+  End with a line saying just "end".

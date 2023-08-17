@@ -1,0 +1,51 @@
+Displaying Data
+======================
+
+You can use print command to display the value of variables and other expressions
+
+The print or p command takes any C expression as its argument:
+
+p [/format] [expression]
+
+(gdb) print i
+
+(gdb) print &i
+
+(gdb) print sizeof(i)
+
+(gdb) print sizeof(&i)
+
+
+Gdb comes with a powerful tool for directly examing memory: the x command. 
+
+The x command examines memory, starting at a particular address. 
+
+(gdb) x &i
+0x7fffffffdedc:	0x00000539
+
+It comes with a number of formatting commands that provide precise control over 
+	how many bytes you’d like to examine and 
+	how you’d like to print them
+
+(gdb) x/4xb &i
+0x7fffffffdedc:	0x39	0x05	0x00	0x00
+
+The flags indicate that I want to examine 4 values
+	formatted as he'x' numerals, one 'b'yte at a time
+
+on Intel machines, bytes are stored in “little-endian” order
+
+Examining types with ptype
+============================
+
+It tells you the type of a C expression
+
+(gdb) ptype i
+type = int
+
+(gdb) ptype &i
+type = int *
+
+(gdb) ptype main
+type = int ()
+

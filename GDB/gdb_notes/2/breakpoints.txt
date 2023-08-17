@@ -1,0 +1,85 @@
+The whole purpose of coming to gdb was to pause, observe and proceed. 
+
+There is no point in running a program without a breakpoint! 
+
+Breakpoints
+=================
+
+Breakpoints can be used to stop the program run in the middle, at a designated point.
+
+Whenever gdb gets to a breakpoint it halts execution of your program and allows you to examine it
+
+Simplest way of putting a breakpoint is using the function name or a line number.
+
+(gdb) break factorial 
+Breakpoint 1 at 0x400538: file source_code.c, line 5.
+
+(gdb) break 7
+Breakpoint 2 at 0x400545: file source_code.c, line 7.
+
+List of functions available
+========================================
+
+(gdb) info functions 
+
+List of breakpoints available
+================================
+
+(gdb) info breakpoints 
+
+Run the program and it will stop at the first breakpoint
+
+(gdb) r
+
+Delete Breakpoints
+==========================
+
+(gdb) delete <bpnumber>
+
+Disable/Enable Breakpoints
+===========================
+
+(gdb) disable <bpnumber>
+
+(gdb) enable <bpnumber>
+
+Step by step
+==============
+
+Once you have hit a breakpoint, you can have fine control over the execution of the program, using the following commands
+
+(gdb) continue
+
+Continue execution till the next break point or end of program
+
+Typing 'run' again instead of 'continue' would restart the program from the beginning.
+
+(gdb) next
+
+Proceed to the next line of execution (Doesn’t step into a function call in the current line)
+
+(gdb) step
+
+The same as next, but with difference that if you are at a function call
+	next -  the function will execute and return
+	step - step into the first line of the called function.
+
+(gdb) finish
+	Finish executing the current function, then pause (also called step out). Useful if you accidentally stepped into a function.
+
+
+(gdb) print n
+
+The print command prints the value of the variable specified
+
+(gdb) print/x n
+Prints the value in hexadecimal
+
+Tip
+========
+Typing “step” or “next” a lot of times can be tedious. If you just press ENTER, gdb will repeat the same command you just gave it.
+
+
+
+
+

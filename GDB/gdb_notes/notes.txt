@@ -1,0 +1,39 @@
+What is GDB?
+================
+
+GDB stands for GNU DeBugger which helps you to debug your binary object file created in compilation process.
+
+GDB allows to you see what is happening in your program which really helps much when program crashes, especially when segmentation fault occurs
+
+Some uses of gdb:
+==================
+	Step through a program line by line
+
+	Set breakpoints that will stop your program
+
+	Make your program stop on specified conditions
+
+	Show the present values of variables
+
+	Examine the contents of any frame on the call stack
+
+
+Languages supported by GDB 
+===========================
+
+Ada, Assembly, C, C++, D, Fortran, Go, Objective-C, OpenCL, Modula-2, Pascal, Rust 
+
+
+Install gdb
+==============
+
+$ sudo apt-get install gdb
+
+$ gdb --version
+
+
+
+
+
+
+

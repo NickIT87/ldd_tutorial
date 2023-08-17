@@ -1,0 +1,6 @@
+start command
+================
+
+Sets a temporary breakpoint on main() and starts executing a program under GDB.
+
+

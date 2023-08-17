@@ -1,0 +1,11 @@
+Debugging an Already-running Process
+=======================================
+
+attach process-id
+
+	This command attaches to a running process—one that was started outside gdb
+
+detach
+
+	This command attaches to a running process—one that was started outside gdb
+

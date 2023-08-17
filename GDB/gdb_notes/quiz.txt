@@ -1,0 +1,115 @@
+1. For debugging with GDB, the file “source_code” can be created with the command
+a) gcc -g -o source_code source_code.c
+b) gcc -g source_code.c
+c) gdb source_code
+d) none of the mentioned
+
+2. For debugging with GDB, the compiled program can be run by the command
+a) run
+b) execute
+c) ./<filename>
+d) none of the mentioned
+
+3. In GDB, breakpoints can be set by the command
+a) break
+b) b
+c) both break and b
+d) none of the mentioned
+
+4. GDB stands for
+a) GNU debugger
+b) General debugging breakpoint
+c) General debugger
+d) None of the mentioned
+
+5. GDB can be used for
+a) c language
+b) c++ language
+c) both c and c++ language
+d) none of the mentioned
+
+6. The command “gdb source_code”
+a) will start debugging for the file “source_code” if the file is compiled with -g option with GCC
+b) will create executable for debugging
+c) will provide all errors present in the file “source_code”
+d) none of the mentioned
+
+7. In debugging with GDB, break points can be set to
+a) any line
+b) any function
+c) both any line and function
+d) none of the mentioned
+
+8. In GDB debugging, we can proceed to the next breakpoint with command
+a) next
+b) continue
+c) both next and continue
+d) none of the mentioned
+
+9. At the time of debugging with GDB, if we just press ENTER
+a) GDB will repeat the same command you just gave it
+b) GDB will do nothing
+c) GDB will exit
+d) None of the mentioned
+
+10. To print the value of a variable while debugging with GDB, ______ command can be used.
+a) printf
+b) print
+c) show
+d) none of the mentioned
+
+11. Which GDB command prints the value of a variable in hex.
+a) print/x
+b) print/h
+c) print/e
+d) none of the mentioned
+
+12. Which GDB command interrupts the program whenever the value of a variable is modified and prints the value old and new values of the variable?
+a) watch
+b) show
+c) trace
+d) none of the mentioned
+
+13. Which GDB command produces a stack trace of the function calls that lead to a segmentation fault?
+a) trace
+b) backtrace
+c) forwardtrace
+d) none of the mentioned
+
+14. The specific break point can be deleted by _____ command in GDB.
+a) delete
+b) del
+c) remove
+d) none of the mentioned
+
+15. The “step” command of GDB
+a) executes the current line of the program
+b) stops the next statement to be executed
+c) executes the current line of the program & stops the next statement to be executed
+d) none of the mentioned
+
+16. GDB can be used
+a) to find out the memory leakages
+b) to get the result of a particular expression in a program
+c) to find the reason of segementation fault
+d) all of the mentioned
+
+17.Which GDB command can be used to put a breakpoint at the beginning of the program?
+a) b main
+b) b start
+c) break
+d) none of the mentioned
+
+18. To put the breakpoint at the current line ____ command can be used?
+a) b
+b) break
+c) both b and break
+d) none of the mentioned
+
+19.We can list all the breakpoint in GDB by the command
+a) info break
+b) break all
+c) both info break and break all
+d) none of the mentioned
+
+

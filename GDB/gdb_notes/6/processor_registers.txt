@@ -1,0 +1,14 @@
+Using gdb to View the CPU Registers
+===================================
+
+The i r command displays the current contents of the CPU registers. 
+
+ The first column is the name of the register
+
+The second shows the current bit pattern in the register, in hexadecimal.
+
+The third column shows some the register contents in 32-bit/64-bit unsigned decimal. 
+
+
+
+

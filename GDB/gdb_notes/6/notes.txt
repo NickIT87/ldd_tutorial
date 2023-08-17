@@ -1,0 +1,56 @@
+Frames
+==================
+
+A running application maintains a call stack that contains information about its functions that have been called.
+
+Each item in the stack is a call frame, and each frame contains both the information needed to return to its caller and the information needed to provide the local variables of the function.
+
+When your program starts, the call stack has only one frame, that of the function main. 
+
+Each function call pushes a new frame onto the stack, and each function return removes the frame for that function from the stack.
+
+Recursive functions can generate many frames.
+
+Use backtrace.c for the below commands
+
+$ gcc backtrace.c -o backtrace -g
+
+$ gdb ./backtrace
+
+(gdb) b main
+
+(gdb) run
+
+(gdb) bt
+
+(gdb) b func1
+
+(gdb) bt
+
+Moving from one frame to another
+================================
+
+You can move between the stack frames using ‘frame [number]’
+
+
+Get Information about a Stack Frame
+=====================================
+
+You can get the information about a particular frame using ‘info frame [number]’ 
+
+(gdb) info frame  1   # list information about the current stack frame
+
+(gdb) info variables # list all global and static variables 
+
+(gdb) info locals   # list local variable values of current stack frame
+
+(gdb) info args     # list argument values of current stack frame
+
+
+(gdb) info registers        # list register values
+
+(gdb) info registers eax    # shows just the register eax
+
+
+(gdb) info breakpoints      # list status of all breakpoints
+

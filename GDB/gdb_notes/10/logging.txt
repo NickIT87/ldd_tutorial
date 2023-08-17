@@ -1,0 +1,16 @@
+You may want to save the output of gdb commands to a file
+
+There are several commands to control gdb’s logging.
+
+set logging on
+	Enable logging. 
+	GDB saves all output from this point in a text file called gdb.txt that resides in the directory in which you are running GDB 
+
+set logging off
+	Disable logging.
+	Note that you can turn logging on and off several times and GDB will concatenate output to the gdb.txt file
+
+set logging file file
+	Change the name of the current logfile. The default logfile is ‘gdb.txt’.
+
+Useful when you’re dealing with a long stack trace, or a multi-threaded stack trace

@@ -1,0 +1,73 @@
+Debugging Segmentation Fault Example
+=====================================
+
+The first step is to compile the program with debugging flags:
+
+$ gcc -g source_code.c
+
+$ gdb ./a.out
+
+We'll just run it and see what happens:
+
+(gdb) run
+Starting program: /home/panther2/Linux_System_Prog/day3_debugging/gdb/4/a.out 
+hello
+
+Program received signal SIGSEGV, Segmentation fault.
+__GI__IO_getline_info (fp=fp@entry=0x7ffff7dd4640 <_IO_2_1_stdin_>, buf=buf@entry=0x0, n=1022, delim=delim@entry=10, 
+    extract_delim=extract_delim@entry=1, eof=eof@entry=0x0) at iogetline.c:86
+86	iogetline.c: No such file or directory.
+
+
+So we received the SIGSEGV signal from the operating system. This means that we tried to access an invalid memory address
+
+(gdb) backtrace
+The command backtrace (or bt) will show you the current function call stack, with the current function at the top, and the callers in order beneath it:
+
+
+(gdb) bt
+#0  __GI__IO_getline_info (fp=fp@entry=0x7ffff7dd4640 <_IO_2_1_stdin_>, buf=buf@entry=0x0, n=1022, delim=delim@entry=10, 
+    extract_delim=extract_delim@entry=1, eof=eof@entry=0x0) at iogetline.c:86
+#1  0x00007ffff7a80368 in __GI__IO_getline (fp=fp@entry=0x7ffff7dd4640 <_IO_2_1_stdin_>, buf=buf@entry=0x0, n=<optimized out>, 
+    delim=delim@entry=10, extract_delim=extract_delim@entry=1) at iogetline.c:38
+#2  0x00007ffff7a7f206 in _IO_fgets (buf=0x0, n=<optimized out>, fp=0x7ffff7dd4640 <_IO_2_1_stdin_>) at iofgets.c:56
+#3  0x0000000000400634 in main (argc=1, argv=0x7fffffffdfb8) at source_code.c:10
+
+We are only interested in our own code here, so we want to switch to stack frame 3 and see where the program crashed:
+
+(gdb) frame 3
+#3  0x0000000000400634 in main (argc=1, argv=0x7fffffffdfb8) at source_code.c:10
+10		fgets(buf, 1024, stdin);
+
+We crashed inside the call to fgets.
+So the problem must be one of our arguments
+
+(gdb) print buf
+$1 = 0x0
+
+The value of buf is 0x0, which is the NULL pointer. 
+malloc returns NULL when it cannot allocate the amount of memory requested. So our malloc must have failed. 
+
+
+
+
+=======================
+Print Source Code In GDB Console
+======================
+
+(gdb) list
+prints 10 lines of source code at a time
+
+You can also pass the list command <a line number> or <a function name> to tell GDB where to start.
+
+Display Lines After A Line Number
+(gdb) list 12
+
+Display Lines After A Function
+(gdb) list main
+
+Display Lines 1 to 14
+(gdb) list 1,14
+
+
+

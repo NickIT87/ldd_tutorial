@@ -1,0 +1,6 @@
+Another Useful function of gdb debugger is the disassemble command. 
+as its name suggesting, this command helps in disassembling of provide function assembler codes. 
+
+like if we want to disassemble main function. we just need to type
+
+(gdb) disassemble main

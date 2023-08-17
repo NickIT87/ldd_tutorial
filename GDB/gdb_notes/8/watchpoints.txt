@@ -1,0 +1,39 @@
+Watchpoints are similar to breakpoints
+
+Watchpoints are set on variables. 
+
+When those variables are read or written, the watchpoint is triggered and program execution stops.
+
+How do I set a write watchpoint for a variable?
+===============================================
+
+Use the watch command.
+
+The argument to the watch command is an expression that is evaluated. 
+
+ This implies that the variabel you want to set a watchpoint on must be in the current scope.
+
+So, to set a watchpoint on a non-global variable, you must have set a breakpoint that will stop your program when the variable is in scope. 
+
+You set the watchpoint after the program breaks.
+
+
+(gdb) watch x
+
+How do I set a read watchpoint for a variable?
+===============================================
+
+Use the rwatch command. Usage is identical to the watch command.
+
+
+(gdb) rwatch y 
+
+How do I set a read/write watchpoint for a variable?
+=====================================================
+
+Use the awatch command. Usage is identical to the watch command.
+
+How do I disable watchpoints?
+=============================
+
+Active watchpoints show up the breakpoint list. Use the info breakpoints command to get this list. Then use the disable command to turn off a watchpoint, just like disabling a breakpoint.
