@@ -3,7 +3,9 @@
         {
             "name": "macos", //"Linux",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "/opt/homebrew/opt/igraph/include/igraph",
+                "/opt/homebrew/opt/igraph/lib"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
