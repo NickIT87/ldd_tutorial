@@ -1,0 +1,12 @@
+name: Nick IT
+email: nick@example.com
+
+ [Skills]
+C
+Go
+Python
+
+ [Projects]
+Resume generator
+Website portfolio
+usage: ./resume_builder --input example_resume.txt --output my_resume.pdf --title "Nick IT — Resume"
