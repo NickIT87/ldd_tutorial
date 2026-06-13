@@ -24,7 +24,9 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "/opt/homebrew/include",                   // <== для libhpdf
-                "/opt/homebrew/opt/igraph/include/igraph"  // <== для igraph
+                "/opt/homebrew/opt/igraph/include/igraph", // <== для igraph
+                "/opt/homebrew/include/glib-2.0",           // <== glib
+                "/opt/homebrew/lib/glib-2.0/include",  // glibconfig.h
             ],
             // "libPath": [
             //     "/opt/homebrew/lib",                       // <== libhpdf
