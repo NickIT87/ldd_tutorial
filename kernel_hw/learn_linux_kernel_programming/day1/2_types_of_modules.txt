@@ -1,0 +1,10 @@
+Types of Modules
+===================
+
+1. In-Source Tree: Modules present in the Linux Kernel Source Code
+
+2. Out-of-Tree: Modules not present in the Linux Kernel Source Code.
+
+All modules start out as "out-of-tree" developments, that can be compiled using the context of a source-tree. 
+
+Once a module gets accepted to be included, it becomes an in-tree module.

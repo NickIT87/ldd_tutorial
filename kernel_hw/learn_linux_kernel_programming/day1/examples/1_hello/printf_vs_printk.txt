@@ -1,0 +1,23 @@
+printf vs  printk
+==================
+
+printf() is a function in the C Standard Library
+
+printk() is a kernel level function
+
+The printk() is called with one more argument than printf(), like this:
+
+printk(KERN_log_priority "hello world\n");
+
+Here, log_priority is one of the eight values (predefined in linux/kernel.h, similar to /usr/include/sys/syslog.h)
+
+	EMERG, 
+	ALERT, 
+	CRIT, 
+	ERR, 
+	WARNING, 
+	NOTICE, 
+	INFO, 
+	DEBUG (in order of decreasing priority).
+
+printk() writes to the kernel buffer, whereas printf() writes on the standard output

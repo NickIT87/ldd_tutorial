@@ -1,0 +1,18 @@
+To Build Modules:
+
+	make -C /lib/modules/`uname -r`/build M=${PWD} modules
+
+To clean:
+
+	make -C /lib/modules/`uname -r`/build M=${PWD} clean
+
+
+The above commands starts by changing its directory to the one provided with the -C option (that is your kernel source directory)
+
+There it finds the kernel's top level makefile. The M= option causes the Makefile to move back into your module source directory before trying to build the modules.
+
+Note: M is not make option but argument passed to it
+
+obj-m refers to the list of modules 
+
+The kernel Makefile will read our Makefile to find out what to build, we specify that by writing obj-m += hello.o

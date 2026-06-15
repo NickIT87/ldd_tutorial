@@ -1,0 +1,46 @@
+========================================
+Linux dmesg command Tutorial 
+=======================================
+
+==========================
+What does dmesg command do?
+==========================
+
+Kernel keeps all the logs in a ring buffer.
+
+This is done to avoid the boot logs being getting lost until the syslog daemon starts and collects them and stores them in /var/log/dmesg.
+
+We will loss the boot up logs if we don't store them in ring buffer.
+
+dmesg command is used to control or print kernel ring buffer. Default is to prints messages from the kernel ring buffer on to console.
+
+==========================
+Important dmesg commands:
+==========================
+
+1. Clear Ring buffer: 
+	
+	$dmesg -c -> Will clear the ring buffer after printing
+	$dmesg -C -> Will clear the ring buffer but does not prints on the console.
+
+2. Don't Print Timestamps: 
+
+	$dmesg -t -> Will not print timestamps
+
+3. Restrict dmesg command to list of levels.
+
+	$ dmesg -l err,warn will print only error and warn messages
+
+4. Print human readable timestamps:
+
+	$dmesg -T will print timestamps in readable format. Note: Timestamp could be inaccurate.
+
+5. Display the log level in the output:
+
+	$dmesg -x will add loglevel to the output.
+
+6. You can combine options, so dmesg -Tx will print both human readable time and loglevel.
+
+
+
+

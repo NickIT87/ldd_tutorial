@@ -1,0 +1,6 @@
+Basic Commands
+==================
+
+1. List Modules: (lsmod) lsmod gets its information by reading the file /proc/modules.
+
+2. Module Information: (modinfo) : prints the information of the module.

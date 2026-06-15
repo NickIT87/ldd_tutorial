@@ -1,0 +1,1 @@
+For example, I have file hello.c that contain all of my source code. But I want module to be linux.ko.
